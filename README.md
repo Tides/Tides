@@ -10,7 +10,7 @@
 
 <br/>
 
-### Check out my repositories to see the projects I'm currently working on
+### Check out below to see the projects I'm actively working on
 
 [twitter]: https://twitter.com/TidesVI
 [soundcloud]: https://soundcloud.com/tidesvi
