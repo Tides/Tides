@@ -1,7 +1,7 @@
 ### Hi 👀, My name's Junior but I go by Tides
 
 ## I'm a developer/producer
-- 🎵 I like to make music whenever I randomly get inspired/am feeling down
+- I like to make music whenever I randomly get inspired/am feeling down
 - I like to mainly code for fun/to pass time
 
 ### Socials:
