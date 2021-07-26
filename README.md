@@ -10,7 +10,9 @@
 
 <br/>
 
-### Check out below to see the projects I'm actively working on
+### Stats:
+<img alt="Tides Stats" src="https://github-readme-stats.vercel.app/api?username=Tides&show_icons=true&theme=tokyonight">
 
+### Check out below to see the projects I'm actively working on
 [twitter]: https://twitter.com/TidesVI
 [soundcloud]: https://soundcloud.com/tidesvi
