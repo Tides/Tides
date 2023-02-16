@@ -1,0 +1,193 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Roboto, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  background-color: black;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-width: 100%;
+  min-height: 100vh;
+}
+
+@layer components {
+  @keyframes spinner-border {
+    to {
+      transform: rotate(360deg) /* rtl:ignore */;
+    }
+  }
+  
+  .color-container {
+    @apply flex flex-col;
+    @apply gap-1;
+    width: 350px;
+    @apply bg-gray-800;
+    @apply z-10;
+  }
+
+  .colorpicker-value {
+    flex: 1;
+    border-radius: 4px;
+    border: #bdbdbd;
+    min-width: 20px;
+    min-height: 20px;
+    width: 20px;
+  }
+
+  .spinner-border {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    vertical-align: -0.125em;
+    border: 0.25em solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: 0.75s linear infinite spinner-border;
+  }
+
+  .spinner-border-sm {
+    width: 1rem;
+    height: 1rem;
+    border-width: 0.2em;
+  }
+
+  .medium-font {
+    font-size: 0.875rem;
+  }
+
+  html,
+  body {
+    font-family: "Roboto", Helvetica, Arial, sans-serif !important;
+    min-height: 100%;
+    min-width: 100%;
+    min-height: 100vh;
+  }
+
+  .base-container {
+    background: #ffffff;
+    width: 100% !important;
+    max-width: 400px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    align-self: center !important;
+    box-shadow: 0 0 25px #f2f5f7 !important;
+    border: solid;
+    border-color: #ececec !important;
+    border-width: 1px !important;
+    border-radius: 5px !important;
+    @apply shadow-lg;
+  }
+
+  .custom-form {
+    border-radius: 5px;
+    border: 2px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 0 auto;
+  }
+
+  @media only screen and (max-height: 700px) {
+    .base-container {
+      margin-top: 130px !important;
+    }
+  }
+}
+
+@layer utilities {
+  body:not(.scrollbar)::-webkit-scrollbar {
+    @apply bg-gray-900;
+  }
+
+  body:not(.scrollbar)::-webkit-scrollbar-thumb {
+    background: #3e3e3e;
+    border: 4px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 0;
+  }
+
+  body:not(.scrollbar)::-webkit-scrollbar-corner,
+  body:not(.scrollbar) ::-webkit-scrollbar {
+    @apply bg-gray-900;
+  }
+
+  body:not(.scrollbar) ::-webkit-scrollbar-thumb {
+    background: #3e3e3e;
+    border: 4px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 0;
+  }
+
+  body:not(.scrollbar) ::-webkit-scrollbar-corner {
+    @apply bg-gray-900;
+  }
+
+  .active {
+    @apply bg-gray-700;
+  }
+
+  .disabled {
+    @apply disabled:text-gray-700 disabled:border-gray-200 disabled:shadow-none disabled:cursor-not-allowed;
+  }
+
+  .input-control {
+    @apply text-sm rounded;
+    @apply block px-3 py-1.5;
+    @apply bg-gray-800 border-gray-600 placeholder-gray-400 text-white focus:ring-white focus:border-white;
+  }
+
+  .input-checkbox {
+    @apply appearance-none h-4 w-4;
+    @apply border border-gray-300 rounded-sm bg-white;
+    @apply checked:bg-blue-600 checked:border-blue-600;
+    @apply focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer;
+  }
+
+  .input-control-icon {
+    @apply text-sm rounded;
+    @apply block px-3 py-1.5;
+    @apply bg-gray-800 border-gray-600 placeholder-gray-400 text-white focus:ring-white focus:border-white;
+  }
+
+  .input-control:read-only :not(select, option) {
+    @apply bg-gray-800;
+    @apply text-gray-800 placeholder-gray-800;
+  }
+
+  .light-input-control {
+    @apply text-sm rounded;
+    @apply block px-3 py-1.5;
+    @apply border-gray-300 placeholder-gray-500 text-black focus:ring-gray focus:border-gray;
+  }
+
+  .light-input-control-icon {
+    @apply text-sm rounded;
+    @apply block px-3 py-1.5;
+    @apply border-gray-300 placeholder-gray-500 text-black focus:ring-gray focus:border-gray;
+  }
+
+  .btn {
+    @apply flex justify-center;
+    @apply rounded-md border bg-primary;
+    @apply py-2 px-4 text-sm font-medium;
+    @apply hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2;
+  }
+
+  .btn:disabled {
+    @apply bg-gray-800;
+    @apply text-gray-700;
+  }
+}
