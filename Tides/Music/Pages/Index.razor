@@ -1,0 +1,9 @@
+﻿@page "/"
+@using Tides.Music.Components
+
+<section class="grid grid-cols-1 sm:grid-cols-8 md:grid-cols-6 gap-4">
+    @foreach (var song in this.Songs)
+    {
+        <Card Name=@song.Name Genre=@song.Genre Description=@song.Description />
+    }
+</section>

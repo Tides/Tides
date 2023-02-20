@@ -8,6 +8,7 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\Shared\Tides.Shared.csproj" />
+		<ProjectReference Include="..\Music\Tides.Music.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -16,6 +17,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="7.0.3" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="7.0.3" />
 		<PackageReference Include="CliWrap" Version="3.6.0" />
 	</ItemGroup>
 

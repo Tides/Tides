@@ -15,6 +15,7 @@ colors.stone = twColors.stone;
 module.exports = {
     content: [
         "./src/**/*.{js,jsx,ts,tsx}",
+        "../**/*.{razor,html,cs}",
         "./index.html",
         './node_modules/tw-elements/dist/js/**/*.js',
     ],    

@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "start": "echo Starting the development server && vite --host ::",
     "tailwind": "npx tailwindcss -i ./Styles/tailwind.css -o ./wwwroot/css/tailwind.css --minify",
-    "tailwindDev": "npx tailwindcss -i ./tailwind.css -o ./src/tailwind.css --watch"
+    "tailwindDev": "npx tailwindcss -i ./tailwind.css -o ./src/tailwind.css -o ../Music/wwwroot/css/tailwind.css --watch"
   },
   "dependencies": {
     "react": "^18.2.0",

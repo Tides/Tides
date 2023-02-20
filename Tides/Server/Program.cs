@@ -38,6 +38,26 @@ app.UseStaticFiles().UseStaticFiles(new StaticFileOptions
 
 app.UseRouting();
 
+app.MapWhen(ctx => ctx.Request.Host.Port == 5002 || ctx.Request.Host.Equals("music.tides.cc"), music =>
+{
+    music.Use((ctx, next) =>
+    {
+        ctx.Request.Path = "/Music" + ctx.Request.Path;
+        return next();
+    });
+
+    music.UseBlazorFrameworkFiles("/Music");
+    music.UseStaticFiles().UseStaticFiles("/Music");
+
+    music.UseRouting();
+
+    music.UseEndpoints(endpoints =>
+    {
+        endpoints.MapControllers();
+        endpoints.MapFallbackToFile("/Music/{*path:nonfile}", "/Music/index.html");
+    });
+});
+
 if (isDev)
 {
     app.UseSpa(builder =>
