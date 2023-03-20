@@ -6,7 +6,7 @@
     },
     {
         "name": "Mythakel",
-        "description": "A simple landing page built for the streamer Mythakel. Built with React + Vite, typscript & TailwindCSS.",
+        "description": "A simple landing page built for the streamer Mythakel. Built with React + Vite, typscript & TailwindCSS with an ASP.Net Core Backend",
         "link": "https://mythakel.com",
         "linkText": "Go to website"
     }
