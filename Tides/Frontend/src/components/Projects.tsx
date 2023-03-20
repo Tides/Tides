@@ -8,7 +8,7 @@ export class Projects extends Component {
       <div className="flex items-center gap-5 w-4/6">
         {projects.map((data, _) => {
           return (
-            <Card key={data.name} name={data.name} description={data.description} link={data.link} />
+            <Card key={data.name} name={data.name} description={data.description} link={data.link} linkText={data.linkText} />
           );
         })}
       </div>

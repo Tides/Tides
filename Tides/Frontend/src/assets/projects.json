@@ -3,5 +3,11 @@
         "name": "Obsidian",
         "description": "Obsidian is a C# .NET implementation of the Minecraft server protocol. Obsidian is currently still in development, and a lot of love and care is being put into the project!",
         "link": "https://github.com/ObsidianMC/Obsidian"
+    },
+    {
+        "name": "Mythakel",
+        "description": "A simple landing page built for the streamer Mythakel. Built with React + Vite, typscript & TailwindCSS.",
+        "link": "https://mythakel.com",
+        "linkText": "Go to website"
     }
 ]
